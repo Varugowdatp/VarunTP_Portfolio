@@ -3,6 +3,6 @@ node_modules
 out
 next-env.d.ts
 *.tsbuildinfo
-SWE_Resume_Template__8_.pdf
-photo.jpg
-image.png
+/SWE_Resume_Template__8_.pdf
+/photo.jpg
+/image.png
