@@ -51,7 +51,7 @@ function Terminal() {
         <span className="h-3 w-3 rounded-full bg-green-400/80" />
         <span className="ml-3 font-mono text-xs text-white/40">UserController.java</span>
       </div>
-      <pre className="h-[250px] overflow-hidden p-5 font-mono text-[13px] leading-[1.65] text-slate-200">
+      <pre className="h-[230px] overflow-hidden p-5 font-mono text-[13px] leading-[1.65] text-slate-200">
         {lines.map((l, i) => (
           <div key={i} className="whitespace-pre">
             <span className="mr-4 inline-block w-4 select-none text-right text-white/25">{i + 1}</span>
@@ -64,11 +64,9 @@ function Terminal() {
   );
 }
 
-function Badge({ children, className }: { children: React.ReactNode; className: string }) {
+function Chip({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      className={`absolute z-20 animate-float rounded-xl border border-line bg-surface/90 px-3.5 py-2 text-xs font-medium shadow-xl backdrop-blur ${className}`}
-    >
+    <div className="rounded-xl border border-line bg-surface/90 px-3.5 py-2.5 text-sm font-medium shadow-lg backdrop-blur">
       {children}
     </div>
   );
@@ -183,26 +181,26 @@ export default function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="relative col-span-12 hidden h-[540px] lg:col-span-5 lg:block"
+          className="col-span-12 hidden lg:col-span-5 lg:block"
         >
-          <div className="absolute bottom-0 left-0 w-[92%]">
-            <Terminal />
-          </div>
-
-          <div className="absolute right-0 top-0 z-10 w-[230px] rotate-3 animate-float">
-            <div className="conic-border rounded-3xl p-0">
-              <div className="overflow-hidden rounded-3xl bg-surface">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/photo.jpg" alt="Varun T P" width={230} height={264} className="block h-[264px] w-full object-cover object-top" />
+          <div className="mx-auto flex max-w-[520px] flex-col gap-5">
+            <div className="flex items-stretch gap-5">
+              <div className="conic-border w-[190px] shrink-0 rounded-3xl p-0">
+                <div className="overflow-hidden rounded-3xl bg-surface">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/photo.jpg" alt="Varun T P" width={190} height={220} className="block h-[220px] w-full object-cover object-top" />
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col justify-center gap-3">
+                <Chip>
+                  <span className="text-accent">●</span> CGPA 9.54
+                </Chip>
+                <Chip>350+ DSA solved</Chip>
+                <Chip>Spring Boot · React · Flutter</Chip>
               </div>
             </div>
+            <Terminal />
           </div>
-
-          <Badge className="left-0 top-4 [animation-delay:-2s]">
-            <span className="text-accent">●</span> CGPA 9.54
-          </Badge>
-          <Badge className="left-[70px] top-[100px] [animation-delay:-4s]">350+ DSA solved</Badge>
-          <Badge className="bottom-[-18px] right-4 [animation-delay:-1s]">Spring Boot · React · Flutter</Badge>
         </motion.div>
       </div>
     </section>
