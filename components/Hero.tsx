@@ -84,8 +84,8 @@ export default function Hero() {
   const name = useScramble("Varun T P");
 
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center">
-      <div className="mx-auto grid w-full max-w-[1500px] grid-cols-12 items-center gap-10 px-6 pb-28 pt-24 lg:px-14">
+    <section id="top" className="relative flex items-center lg:min-h-[100svh]">
+      <div className="mx-auto grid w-full max-w-[1500px] grid-cols-12 items-center gap-10 px-5 pb-16 pt-24 sm:px-6 lg:px-14 lg:pb-28">
         {/* LEFT */}
         <div className="col-span-12 lg:col-span-7">
           <motion.div
@@ -198,11 +198,11 @@ export default function Hero() {
             </div>
           </div>
 
-          <Badge className="left-0 top-6 [animation-delay:-2s]">
+          <Badge className="left-0 top-4 [animation-delay:-2s]">
             <span className="text-accent">●</span> CGPA 9.54
           </Badge>
-          <Badge className="right-[245px] top-[200px] [animation-delay:-4s]">350+ DSA solved</Badge>
-          <Badge className="-right-2 top-[300px] [animation-delay:-1s]">Spring Boot · React · Flutter</Badge>
+          <Badge className="left-[70px] top-[100px] [animation-delay:-4s]">350+ DSA solved</Badge>
+          <Badge className="bottom-[-18px] right-4 [animation-delay:-1s]">Spring Boot · React · Flutter</Badge>
         </motion.div>
       </div>
     </section>

@@ -8,7 +8,7 @@ import { Chip, Counter, FadeIn, Magnetic, Marquee, SectionHead, SpotCard } from 
 import TechIcon from "./TechIcon";
 
 const wrap = "mx-auto w-full max-w-[1500px] px-6 lg:px-14";
-const sec = "relative flex min-h-[100svh] flex-col justify-center py-24";
+const sec = "relative flex flex-col justify-center py-14 sm:py-20 lg:min-h-[100svh] lg:py-24";
 
 /* ---------- Stats + marquee ---------- */
 export function Stats() {
@@ -21,7 +21,7 @@ export function Stats() {
   ];
   void stats;
   return (
-    <section className="relative py-16">
+    <section className="relative py-8 sm:py-16">
       <div className={wrap}>
         <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
           {nums.map((n, i) => (
@@ -293,7 +293,7 @@ export function Contact() {
     { Icon: Github, label: "GitHub", value: "Varugowdatp", href: profile.github },
   ];
   return (
-    <section id="contact" className={`${sec} pb-40`}>
+    <section id="contact" className={`${sec} pb-32 lg:pb-40`}>
       <div className={wrap}>
         <FadeIn>
           <div className="conic-border rounded-[28px]">

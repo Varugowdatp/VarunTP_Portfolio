@@ -182,7 +182,7 @@ export function Magnetic({ children, className }: { children: ReactNode; classNa
 
 export function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: ReactNode; sub?: string }) {
   return (
-    <FadeIn className="mb-12 max-w-2xl">
+    <FadeIn className="mb-8 max-w-2xl sm:mb-12">
       <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-accent">
         <span className="h-px w-10 bg-accent" />
         {eyebrow}
